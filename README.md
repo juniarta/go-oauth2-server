@@ -6,7 +6,7 @@
 
 ## Go OAuth2 Server
 
-This service implements [OAuth 2.0 specification](http://tools.ietf.org/html/rfc6749#section-4.3). Excerpts from the specification are included in this README file to describe different grant types. Please read the full spec for more detailed information.
+This service implements [OAuth 2.0 specification](https://tools.ietf.org/html/rfc6749). Excerpts from the specification are included in this README file to describe different grant types. Please read the full spec for more detailed information.
 
 [![Travis Status for RichardKnop/go-oauth2-server](https://travis-ci.org/RichardKnop/go-oauth2-server.svg?branch=master&label=linux+build)](https://travis-ci.org/RichardKnop/go-oauth2-server)
 [![godoc for RichardKnop/go-oauth2-server](https://godoc.org/github.com/nathany/looper?status.svg)](http://godoc.org/github.com/RichardKnop/go-oauth2-server)
@@ -426,13 +426,9 @@ However, because the session service can be replaced via a plugin, any of the av
 
 ## Dependencies
 
-According to [Go 1.5 Vendor experiment](https://docs.google.com/document/d/1Bz5-UB7g2uPBdOx-rw5t9MxJwkfpx90cqG9AFL0JAYo), all dependencies are stored in the vendor directory. This approach is called `vendoring` and is the best practice for Go projects to lock versions of dependencies in order to achieve reproducible builds.
+Since Go 1.11, a new recommended dependency management system is via [modules](https://github.com/golang/go/wiki/Modules).
 
-This project uses [dep](https://github.com/golang/dep) for dependency management. To update dependencies during development:
-
-```sh
-dep ensure
-```
+This is one of slight weaknesses of Go as dependency management is not a solved problem. Previously Go was officially recommending to use the [dep tool](https://github.com/golang/dep) but that has been abandoned now in favor of modules.
 
 ## Setup
 
